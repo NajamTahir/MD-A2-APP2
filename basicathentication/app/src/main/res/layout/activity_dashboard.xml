@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboardLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/settingicon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_setting"
+        android:contentDescription="Setting"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+
+    <!-- Profile Icon Top Left -->
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_profile"
+        android:contentDescription="Profile"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, User 👋"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2E2E2E"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/summaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Budget Summary"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_below="@id/divider1"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/reviewDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review Detailed Data"
+        android:layout_below="@id/summaryText"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#0066CC"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/selector_nav_color"
+        app:itemTextColor="@color/selector_nav_color" />
+
+
+</RelativeLayout>

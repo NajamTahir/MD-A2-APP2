@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/budgetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#00D9A4">
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_setting"
+        android:contentDescription="Setting"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+
+    <!-- Profile Icon Top Left -->
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_profile"
+        android:contentDescription="Profile"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/budgetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Your Budget"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:textColor="#333333" />
+
+    <EditText
+        android:id="@+id/budgetInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter budget amount"
+        android:inputType="number"
+        android:layout_below="@id/budgetTitle"
+        android:layout_marginTop="28dp"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/budgetCategoryInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter budget category (e.g. Food, Travel)"
+        android:layout_below="@id/budgetInput"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/budgetDurationInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter duration (e.g. Weekly, Monthly)"
+        android:layout_below="@id/budgetCategoryInput"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/budgetNotesInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Optional notes"
+        android:layout_below="@id/budgetDurationInput"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/edit_text"
+        android:padding="12dp"
+        android:minLines="3"
+        android:gravity="top" />
+
+    <Button
+        android:id="@+id/setBudgetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Budget"
+        android:layout_below="@id/budgetNotesInput"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/budgetResultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setBudgetButton"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:textColor="#444444" />
+
+    <Button
+        android:id="@+id/reviewDataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Review All Data"
+        android:layout_below="@id/budgetResultText"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#03DAC5"
+        android:textColor="#000000"
+        android:padding="10dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#00D9A4"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/selector_nav_color"
+        app:itemTextColor="@color/selector_nav_color" />
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addIncomeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_setting"
+        android:contentDescription="Setting"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+
+    <!-- Profile Icon Top Left -->
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_profile"
+        android:contentDescription="Profile"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+
+
+    <TextView
+        android:id="@+id/incomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💰 Add Income"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp" />
+
+    <View
+        android:id="@+id/underline"
+        android:layout_width="50dp"
+        android:layout_height="2dp"
+        android:background="#4CAF50"
+        android:layout_below="@id/incomeTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp" />
+
+    <EditText
+        android:id="@+id/incomeAmountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Income Amount"
+        android:inputType="number"
+        android:background="@drawable/edittext_background"
+        android:padding="14dp"
+        android:textColor="#000"
+        android:layout_below="@id/underline"
+        android:layout_marginTop="32dp" />
+
+    <EditText
+        android:id="@+id/incomeSourceInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Income Source"
+        android:background="@drawable/edittext_background"
+        android:padding="14dp"
+        android:textColor="#000"
+        android:layout_below="@id/incomeAmountInput"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/saveIncomeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Income"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:layout_below="@id/incomeSourceInput"
+        android:layout_marginTop="24dp"
+        android:padding="12dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/selector_nav_color"
+        app:itemTextColor="@color/selector_nav_color" />
+
+</RelativeLayout>

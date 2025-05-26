@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/analyticsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#00D9A4">
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_setting"
+        android:contentDescription="Setting"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+
+    <!-- Profile Icon Top Left -->
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_profile"
+        android:contentDescription="Profile"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/analyticsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📊 Analytics"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#2E2E2E"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_below="@id/analyticsHeader"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/incomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Income: ₹0"
+        android:textSize="18sp"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/expenseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Expense: ₹0"
+        android:textSize="18sp"
+        android:textColor="#F44336"
+        android:textStyle="bold"
+        android:layout_below="@id/incomeText"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/balanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remaining Balance: ₹0"
+        android:textSize="18sp"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        android:layout_below="@id/expenseText"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/reviewDataButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_marginBottom="22dp"
+        android:backgroundTint="#0066CC"
+        android:padding="14dp"
+        android:text="Review Detailed Data"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#00D9A4"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/selector_nav_color"
+        app:itemTextColor="@color/selector_nav_color" />
+
+
+</RelativeLayout>

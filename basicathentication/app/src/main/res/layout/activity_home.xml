@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_setting"
+        android:contentDescription="Setting"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+
+    <!-- Profile Icon Top Left -->
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_profile"
+        android:contentDescription="Profile"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        android:scaleType="centerInside" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Budget App"
+        android:textSize="26sp"
+        android:textColor="#111111"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:layout_below="@id/profileIcon" />
+
+    <!-- Row 1: Dashboard & Add Income -->
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="48dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnDashboard"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:text="📊\nDashboard"
+            android:textAlignment="center"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="12dp" />
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnAddIncome"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:text="💰\nAdd Income"
+            android:textAlignment="center"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Row 2: Add Expense & Budget Management -->
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/row1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnAddExpense"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:text="🧾\nAdd Expense"
+            android:textAlignment="center"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="12dp" />
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnBudget"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:text="📅\nBudget Management"
+            android:textAlignment="center"
+            android:backgroundTint="#9C27B0"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Full-width Analytics button -->
+    <Button
+        android:id="@+id/btnAnalytics"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:text="📈\nAnalytics"
+        android:textAlignment="center"
+        android:backgroundTint="#607D8B"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_below="@id/row2"
+        android:layout_marginTop="12dp"
+        android:padding="12dp" />
+
+</RelativeLayout>
